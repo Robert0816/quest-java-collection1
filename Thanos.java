@@ -27,20 +27,18 @@ public class Thanos {
       heroes.add(str5);
       heroes.add(str6);
       heroes.add(str7);
-      //heroes.remove(5);
-      System.out.println(" ");
-      //System.out.println("heroes size: " + heroes.size());
-        for (Hero hero : heroes) { // iterate though the list
-//Output    System.out.println(hero.getName() + ", age: " + hero.getAge());
-          }
-//    System.out.println(" ");
-
-    /*
-        for (int i = 0;i<heroes.size();i++)
-          {
-            System.out.println(heroes.get(i));
-              }
-    */
+        //    heroes.remove(5);
+        //    System.out.println(" ");
+        //    System.out.println("heroes size: " + heroes.size());
+        //    for (Hero hero : heroes) { // iterate though the list
+        //    System.out.println(hero.getName() + ", age: " + hero.getAge());
+        //     }
+        //    System.out.println(" ");
+        /*
+              for (int i = 0;i<heroes.size();i++) {
+              System.out.println(heroes.get(i));
+                }
+        */
         //     heroes.remove(5);
         //     heroes.set(5,hulkNew);
         //     heroes.add(hulkNew);
@@ -50,59 +48,63 @@ public class Thanos {
       Hero thorNew = new Hero("Thor", 1501);
       heroes.set(5, thorNew);
 
-          //str5.setAge(1501);  // nur das Alter wird ersetzt
-          //str5.setName("It's Thor birthday, now he's 1501"); // nur der Name des Helden Wird ersetzt
-
-          //  System.out.println("heroes size: " + heroes.size());
-        for (Hero hero : heroes) {
-  //output      System.out.println(hero.getName() + ", age: " + hero.getAge());
-          }
-//          System.out.println(" ");
+            /*  str5.setAge(1501);  // nur das Alter wird ersetzt
+                str5.setName("It's Thor birthday, now he's 1501"); // nur der Name des Helden Wird ersetzt
+                System.out.println("heroes size: " + heroes.size());
+                for (Hero hero : heroes) {
+                System.out.println(hero.getName() + ", age: " + hero.getAge());
+                }
+            */          System.out.println(" ");
 
         // TODO 4 : Shuffle the heroes list
          Collections.shuffle(heroes);
-         for(Hero hero : heroes) {
-  //output       System.out.println(hero.getName() + ", age: " + hero.getAge());
-            //System.out.print(" ");
-            }
-  //          System.out.println(" ");
-      // TODO 5 : Keep only the half of the list
-
-          //  System.out.println("halfofHeroes: ");
-
-          // V1
-        /*
-          for (int i = 0; i < heroes.size()/2; i++) {
+            /*  for(Hero hero : heroes) {
+                System.out.println(hero.getName() + ", age: " + hero.getAge());
+                System.out.print(" ");
+                 }
+                System.out.println(" ");hero.size()/2
+        // TODO 5 : Keep only the half of the list
+            //  System.out.println("halfofHeroes: ");
+            // V1
+          /*
+            for (int i = 0; i < heroes.size()/2; i++) {
             Hero hero = heroes.get(i);
-            //heroes.remove(i);
+            heroes.remove(i);
             System.out.println(hero.getName() + ", age: " + hero.getAge());
-            //   System.out.println(heroes);
+              System.out.println(heroes);
              }
-        */
-          //V2
-          List<Hero> heroesList1 = heroes.subList(0, 4);
-          for(Hero hero : heroesList1) {
-    //output     System.out.println(hero.getName() + ", age: " + hero.getAge());
-              }
-
+          */
+              //V2
+              //List<E> subList(int fromIndex,int toIndex)
+          List<Hero> heroesList1 = heroes.subList(0, heroes.size()/2);
+          heroesList1.clear();
+            /*
+                System.out.println(heroes);
+                List<Hero> heroesList1 = heroes.subList(0, heroes.size()/2);//.clear();
+                heroes.subList(0,1).clear()
+                for(Hero hero : heroesList1) {
+                System.out.println(hero.getName() + ", age: " + hero.getAge());
+                   }
+            */
 
               //    System.out.println("heroes size: " + heroes.size() );
               //  for (Hero hero : heroes){
               //   System.out.println(hero.getName() + " " + hero.getAge());
               //  for (Hero hero : heroes ) { // iterate though the list
 
-//          System.out.println(" ");
+              //          System.out.println(" ");
 
       // TODO 6 : Loop throught the list and display the name of the remaining heroes
-              //  for(Hero hero : heroes){}
-              //  public List subList(int fromIndex, int toIndex)
-         List<Hero> heroesList2 = heroes.subList(4, 8);
-         for(Hero hero : heroesList2) {
-         System.out.println(hero.getName());
-          }
-          //System.out.println(hero.getName());
-          //  for(Hero hero : heroes){
-          //    System.out.println(hero.getName());
+              for(Hero hero : heroes){
+                System.out.println(hero.getName());
+              }
+              /*  public List subList(int fromIndex, int toIndex)
+                  List<Hero> heroesList2 = heroes.subList(5, 8);
+                  for(Hero hero : heroesList2) {
+                  System.out.println(hero.getName());
+                    }
+                  System.out.println(hero.getName());
+              */
            System.out.println(" ");
     }
 }
